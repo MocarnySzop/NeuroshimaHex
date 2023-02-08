@@ -9,8 +9,8 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 //manages game frame and canvas
 public final class Display {
 
-    private static final int DEFAULT_WIDTH = 600;
-    private static final int DEFAULT_HEIGHT =600;
+    private static final int DEFAULT_WIDTH = 800;
+    private static final int DEFAULT_HEIGHT = 800;
 
     private static int width;
     private static int height;
@@ -60,9 +60,15 @@ public final class Display {
     public static int getHeight() {
         return height;
     }
+    public static int getHeight(double percent){
+        return (int)(percent*height);
+    }
 
     public static int getWidth() {
         return width;
+    }
+    public static int getWidth(double percent){
+        return (int)(percent*width);
     }
 
     public void addListener(MouseListener listener) {
