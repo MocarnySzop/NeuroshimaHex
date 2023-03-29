@@ -74,7 +74,7 @@ public final class GameEngine implements Runnable {
     }
 
     private void renderFrame() {
-        Graphics graphics = strategy.getDrawGraphics();
+        Graphics2D graphics = (Graphics2D) strategy.getDrawGraphics();
         graphics.clearRect(0, 0, Display.getWidth(), Display.getHeight());
         gameplay.render(graphics);
         strategy.show();

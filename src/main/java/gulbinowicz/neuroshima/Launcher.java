@@ -11,6 +11,7 @@ public class Launcher {
         Gameplay gameplay = new Gameplay();
         GameEngine gameEngine = new GameEngine(display, gameplay);
         gameEngine.start();
+        display.addListener(gameplay);
 
     }
 
